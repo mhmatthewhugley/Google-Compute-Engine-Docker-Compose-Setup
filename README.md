@@ -4,6 +4,8 @@ https://cloud.google.com/free/docs/free-cloud-features#compute
 
 First follow this video from 0:00 to 6:31 https://youtu.be/v46bRHR1Pq0
 
+Then run the commands below in the order presented.
+
 ```
 sudo su
 ```
