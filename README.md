@@ -33,3 +33,8 @@ exit
 ```
 curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_docker-compose.yml && sudo docker compose -f tailscaled_docker-compose.yml -f pihole_docker-compose.yml up
 ```
+
+I add to a adlist and then only apply this to certain groups:
+```
+https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/blacklist%20(https%3A__d3ward.github.io_toolz_adblock.html)
+```
