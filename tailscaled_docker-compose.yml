@@ -1,0 +1,31 @@
+# Follow https://tailscale.com/kb/1114/pi-hole/ specifically steps 3 and 4
+--- # Specifies the start of the file
+version: "3" # The version of docker compose it uses
+services: # The services it will provide
+  tailscaled:
+    privileged: true
+    cap_add:
+      - NET_ADMIN # Required for tailscale to work
+      - NET_RAW # Required for tailscale to work
+    command:
+      - /usr/local/bin/containerboot
+    restart: unless-stopped # The container always restarts unless stopped by user
+    container_name: tailscaled # Name of container
+    network_mode: "host" # Required for tailscale to work
+    environment:
+      - TS_AUTHKEY=tskey-auth-kBzLAa2CNTRL-Fof1XFG3iRchcUuWLqPEScgjawpynrRe # Authenticates with your account https://tailscale.com/kb/1085/auth-keys/
+      - TS_ACCEPT_DNS=false # Required for pihole https://tailscale.com/kb/1114/pi-hole/
+    hostname: googlecloudserver # This will become the tailscale device name
+    image: tailscale/tailscale:latest # The image the container will use
+    ipc: private
+    logging:
+      driver: json-file
+      options: {}
+    # Volumes store your data between container upgrades
+    volumes:
+      - ./Tailscale/var_lib:/var/lib # State data will be stored in this directory
+      - /dev/net/tun:/dev/net/tun # Required for tailscale to work
+# Required for tailscale to work
+networks:
+  host:
+    external: true
