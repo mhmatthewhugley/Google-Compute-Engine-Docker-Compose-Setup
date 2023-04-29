@@ -4,6 +4,7 @@ https://cloud.google.com/free/docs/free-cloud-features#compute
 
 First follow the below video from 0:00 to 6:31.
 [![The words "Google Cloud Free Setup" on the far left on top of a white background with a man on the far right of the image.](http://img.youtube.com/vi/v46bRHR1Pq0/0.jpg)](http://www.youtube.com/watch?v=v46bRHR1Pq0)
+The link used: http://www.youtube.com/watch?v=v46bRHR1Pq0
 
 Then run the commands below in the order presented.
 
