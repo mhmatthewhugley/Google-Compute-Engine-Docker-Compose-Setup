@@ -10,7 +10,8 @@ First follow the below video from 0:58 to 6:31. Note at 3:08 he selects Ubuntu, 
 \
 The link used: http://www.youtube.com/watch?v=v46bRHR1Pq0
 
-Then run the commands below in the order presented:
+Then run the commands below in the order presented: (The commands are based on "https://docs.docker.com/engine/install/debian/#install-using-the-repository", and "https://levelup.gitconnected.com/the-easiest-docker-docker-compose-setup-on-compute-engine-ec171c09a29a)
+")
 
 ```
 sudo su
