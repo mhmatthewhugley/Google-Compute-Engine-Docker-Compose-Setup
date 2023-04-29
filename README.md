@@ -31,8 +31,5 @@ apt-get update && apt-get --yes install docker-ce docker-ce-cli containerd.io do
 exit
 ```
 ```
-sudo su
-```
-```
 curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_docker-compose.yml && docker-compose -f tailscaled_docker-compose.yml -f pihole_docker-compose.yml up
 ```
