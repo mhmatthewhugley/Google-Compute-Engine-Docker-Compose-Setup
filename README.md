@@ -43,3 +43,8 @@ https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-C
 Sign up/Sign in if you have a google account already at ```https://cloud.google.com/free``` (It is possible to sign up and use compute engine without activating the $300 credit/trial.)
 
 Go to ```https://console.cloud.google.com/compute```, and click "ENABLE"(Will take time.).
+
+Now go to ```https://console.cloud.google.com/compute/instancesAdd```.
+Name it what you want, but note it will also be the boot disks name which can not easily be changed later, but you can change the VM instance name.
+For "Region" you select one mentioned here ```https://cloud.google.com/free/docs/free-cloud-features#compute``` otherwise it will cost money.
+For "Zone" I leave it on the default, but certain zones have different hardware avaliable, which could prevent you from easy upgrades in the future so look into each zone. ```https://cloud.google.com/compute/docs/regions-zones``` or ``````.
