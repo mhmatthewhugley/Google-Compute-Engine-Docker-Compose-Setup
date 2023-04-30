@@ -40,7 +40,7 @@ and scroll to "Network interfaces", expand the default one and under "Network Se
 
 ### Setup VM instance:
 #### Note: The commands are based on "https://docs.docker.com/engine/install/debian/#install-using-the-repository", and "https://levelup.gitconnected.com/the-easiest-docker-docker-compose-setup-on-compute-engine-ec171c09a29a".
-These commands were ran in the order presented:
+These commands were ran in the order presented after each successfully finished:
 
 ```
 sudo su
