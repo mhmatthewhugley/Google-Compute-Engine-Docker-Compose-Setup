@@ -1,9 +1,8 @@
 # Google-Compute-Engine-Docker-Compose-Setup
 
+This is my setup I use for Tailscale and Pihole(Unbound is included as a option.). In docker using compose. On a Google Cloud Compute Engine VM instance.
 
-
-This is my setup for Tailscale and Pihole(Unbound is included as a option.). In docker using compose. On Google Cloud Compute Engine
-
+## Setup VM instance.
 Then run the commands below in the order presented: (The commands are based on "https://docs.docker.com/engine/install/debian/#install-using-the-repository", and "https://levelup.gitconnected.com/the-easiest-docker-docker-compose-setup-on-compute-engine-ec171c09a29a)
 ")
 
@@ -28,7 +27,7 @@ exit
 ```
 curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_unbound_docker-compose.yml && sudo docker compose -f tailscaled_docker-compose.yml -f pihole_unbound_docker-compose.yml up -d
 ```
-## VM setup to be within free limits (https://cloud.google.com/free/docs/free-cloud-features#compute):
+## Create VM instance to be within free limits (https://cloud.google.com/free/docs/free-cloud-features#compute):
 
 Sign up/Sign in if you have a google account already at ```https://cloud.google.com/free``` (It is possible to sign up and use compute engine without activating the $300 credit/trial.)
 \
