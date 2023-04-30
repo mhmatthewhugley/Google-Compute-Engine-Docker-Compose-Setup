@@ -29,6 +29,22 @@ and scroll to "Network interfaces", expand the default one and under "Network Se
 \
 12. Click "CREATE".
 
+### Setup Snapshot:
+https://console.cloud.google.com/compute/snapshots
+Click "CREATE SNAPSHOT".
+Select the appropriate "Source disk".
+I put in "Name":
+```
+originalunmodified-snapshot-1
+```
+Under Description:
+```
+A snapshot of the Original Unmodified state when you first CREATE the VM instance.
+```
+Under "Location" select "Regional" make sure you use one mentioned here: ```https://cloud.google.com/free/docs/free-cloud-features#compute``` otherwise it will cost money.
+Click "CREATE".
+
+
 ### Setup VM instance:
 #### Note: The commands are based on "https://docs.docker.com/engine/install/debian/#install-using-the-repository", and "https://levelup.gitconnected.com/the-easiest-docker-docker-compose-setup-on-compute-engine-ec171c09a29a".
 These commands were ran in the order presented after each successfully finished:
