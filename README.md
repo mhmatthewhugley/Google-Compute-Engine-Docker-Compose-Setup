@@ -2,6 +2,7 @@
 
 This is my setup I use for Tailscale and Pihole(Unbound is included as a option.). In docker using compose. On a FREE Google Cloud Compute Engine VM instance.
 
+
 ## Create VM instance to be within free limits (https://cloud.google.com/free/docs/free-cloud-features#compute):
 1. Sign up/Sign in if you have a google account already at: ```https://cloud.google.com/free``` (It is possible to sign up and use compute engine without activating the $300 credit/trial.).
 2. Go to: ```https://console.cloud.google.com/compute```, and click "ENABLE"(Will take time.).
@@ -29,26 +30,25 @@ and scroll to "Network interfaces", expand the default one and under "Network Se
 \
 12. Click "CREATE".
 
+
 ### Setup Snapshot:
-https://console.cloud.google.com/compute/snapshots
-Click "CREATE SNAPSHOT".
-Select the appropriate "Source disk".
-I put in "Name":
+1. Go to ```https://console.cloud.google.com/compute/snapshots```, and click "CREATE SNAPSHOT".
+2. Select the appropriate "Source disk".
+3. For "Name":
 ```
 originalunmodified-snapshot-1
 ```
-Under Description:
+4. For the Description:
 ```
 A snapshot of the Original Unmodified state when you first CREATE the VM instance.
 ```
-Under "Location" select "Regional" make sure you use one mentioned here: ```https://cloud.google.com/free/docs/free-cloud-features#compute``` otherwise it will cost money.
-Click "CREATE".
+5. Under "Location" select "Regional" make sure you use one mentioned here: ```https://cloud.google.com/free/docs/free-cloud-features#compute``` otherwise it will cost money.
+6. Click "CREATE".
 
 
 ### Setup VM instance:
 #### Note: The commands are based on "https://docs.docker.com/engine/install/debian/#install-using-the-repository", and "https://levelup.gitconnected.com/the-easiest-docker-docker-compose-setup-on-compute-engine-ec171c09a29a".
 These commands were ran in the order presented after each successfully finished:
-
 ```
 sudo su
 ```
@@ -70,6 +70,7 @@ exit
 ```
 curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_unbound_docker-compose.yml && sudo docker compose -f tailscaled_docker-compose.yml -f pihole_unbound_docker-compose.yml up -d
 ```
+
 
 ##### Additional Notes & Changes:
 You have to modify in tailscaled_docker-compose.yml the "TS_AUTHKEY".
