@@ -64,7 +64,15 @@ You have to modify the pihole_unbound_docker-compose.yml if you want it to use U
 
 You should modify the TimeZone in pihole_unbound_docker-compose.yml.
 
-You have to look at the pihole docker container logs for the web interface randomly set password.
+
+You have to look at the pihole docker container logs for the web interface randomly set password:
+```
+sudo docker logs pihole
+```
+Look for either "Assigning random password:" or "New password set".
+
+sudo docker logs tailscaled
+Look for "serving on http://".
 
 I manually add to a adlist and then only apply this to certain groups with certain devices(Depending on setup you might need it to apply to all devices.):
 ```
