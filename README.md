@@ -1,6 +1,6 @@
 # Google-Compute-Engine-Docker-Compose-Setup
 
-https://cloud.google.com/free/docs/free-cloud-features#compute
+
 
 This is my setup for Tailscale and Pihole(Unbound is included as a option.). In docker using compose. On Google Cloud Compute Engine
 
@@ -28,11 +28,7 @@ exit
 ```
 curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_unbound_docker-compose.yml && sudo docker compose -f tailscaled_docker-compose.yml -f pihole_unbound_docker-compose.yml up -d
 ```
-
-I manually add to a adlist and then only apply this to certain groups with certain devices:
-```
-https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/blacklist%20(https%3A__d3ward.github.io_toolz_adblock.html)
-```
+## VM setup to be within free limits (https://cloud.google.com/free/docs/free-cloud-features#compute):
 
 Sign up/Sign in if you have a google account already at ```https://cloud.google.com/free``` (It is possible to sign up and use compute engine without activating the $300 credit/trial.)
 \
@@ -68,3 +64,9 @@ Networking
 Hostname and network interfaces
 ```
 scroll to "Network interfaces", expand the default one and under "Network Service Tier" change it from "Premium" to Standard.
+
+### Pihole additional changes:
+I manually add to a adlist and then only apply this to certain groups with certain devices(Depending on setup you might need it to apply to all devices.):
+```
+https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/blacklist%20(https%3A__d3ward.github.io_toolz_adblock.html)
+```
