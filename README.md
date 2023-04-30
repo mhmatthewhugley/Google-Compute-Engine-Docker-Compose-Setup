@@ -38,9 +38,9 @@ Hostname and network interfaces
 ```
 scroll to "Network interfaces", expand the default one and under "Network Service Tier" change it from "Premium" to Standard.
 
-## Setup VM instance.
-Then run the commands below in the order presented: (The commands are based on "https://docs.docker.com/engine/install/debian/#install-using-the-repository", and "https://levelup.gitconnected.com/the-easiest-docker-docker-compose-setup-on-compute-engine-ec171c09a29a)
-")
+### Setup VM instance:
+#### Note: The commands are based on "https://docs.docker.com/engine/install/debian/#install-using-the-repository", and "https://levelup.gitconnected.com/the-easiest-docker-docker-compose-setup-on-compute-engine-ec171c09a29a".
+These commands were ran in the order presented:
 
 ```
 sudo su
@@ -64,7 +64,7 @@ exit
 curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_unbound_docker-compose.yml && sudo docker compose -f tailscaled_docker-compose.yml -f pihole_unbound_docker-compose.yml up -d
 ```
 
-### Pihole additional Notes/Changes:
+##### Pihole additional Notes/Changes:
 You have to look at the pihole docker container logs for the web interface randomly set password.
 
 I manually add to a adlist and then only apply this to certain groups with certain devices(Depending on setup you might need it to apply to all devices.):
