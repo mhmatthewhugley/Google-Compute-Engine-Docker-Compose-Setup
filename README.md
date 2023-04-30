@@ -39,3 +39,7 @@ I manually add to a adlist and then only apply this to certain groups with certa
 ```
 https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/blacklist%20(https%3A__d3ward.github.io_toolz_adblock.html)
 ```
+
+Sign up/Sign in if you have a google account already at https://cloud.google.com/free (It is possible to sign up and use compute engine without activating the $300 credit/trial.)
+
+Go to https://console.cloud.google.com/
