@@ -4,28 +4,17 @@ This is my setup I use for Tailscale and Pihole(Unbound is included as a option.
 
 ## Create VM instance to be within free limits (https://cloud.google.com/free/docs/free-cloud-features#compute):
 1. Sign up/Sign in if you have a google account already at: ```https://cloud.google.com/free``` (It is possible to sign up and use compute engine without activating the $300 credit/trial.).
-\
 2. Go to: ```https://console.cloud.google.com/compute```, and click "ENABLE"(Will take time.).
-\
 3. Now go to: ```https://console.cloud.google.com/compute/instancesAdd```.
-\
 4. Name it what you want, but note it will also be the boot disks name which can not easily be changed later, but you can change the VM instance name easily later.
-\
 5. For "Region" you MUST select one mentioned here: ```https://cloud.google.com/free/docs/free-cloud-features#compute``` otherwise it will cost money.
-\
 6. For "Zone" I leave it on the default, but certain zones have different hardware avaliable, which could prevent you from easy upgrades in the future so look into each zone: ```https://cloud.google.com/compute/docs/regions-zones``` or ```Cant find.```.
-\
 7. Go to "Machine configuration", and set the "Series" to "E2", now under "Machine type" select "e2-micro (2 vCPU, 1 GB memory)".
-\
 8. Go to "Boot disk", click "CHANGE", now under "Boot disk type" select "Standard persistent disk".
-\
 9. Under "Size (GB)" you can set it up to "30" note it is hard to change later to a lower amount.
-\
 (I used the default "Debian", "Debian GNU/Linux 11 (bullseye)" "x86/64, amd64 built on 20230411, supports Shielded VM features
 ".)
-\
 10. After selecting/confirming it go to "Firewall" and check "Allow HTTP traffic" and "Allow HTTPS traffic".
-\
 11. Expand:
 ```
 Advanced options
