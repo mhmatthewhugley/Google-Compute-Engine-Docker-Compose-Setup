@@ -1,42 +1,42 @@
 # Google-Compute-Engine-Docker-Compose-Setup
 
-This is my setup I use for Tailscale and Pihole(Unbound is included as a option.). In docker using compose. On a Google Cloud Compute Engine VM instance.
+This is my setup I use for Tailscale and Pihole(Unbound is included as a option.). In docker using compose. On a FREE Google Cloud Compute Engine VM instance.
 
 ## Create VM instance to be within free limits (https://cloud.google.com/free/docs/free-cloud-features#compute):
-Sign up/Sign in if you have a google account already at ```https://cloud.google.com/free``` (It is possible to sign up and use compute engine without activating the $300 credit/trial.)
+1. Sign up/Sign in if you have a google account already at: ```https://cloud.google.com/free``` (It is possible to sign up and use compute engine without activating the $300 credit/trial.).
 \
-Go to ```https://console.cloud.google.com/compute```, and click "ENABLE"(Will take time.).
+2. Go to: ```https://console.cloud.google.com/compute```, and click "ENABLE"(Will take time.).
 \
-Now go to ```https://console.cloud.google.com/compute/instancesAdd```.
+3. Now go to: ```https://console.cloud.google.com/compute/instancesAdd```.
 \
-Name it what you want, but note it will also be the boot disks name which can not easily be changed later, but you can change the VM instance name.
+4. Name it what you want, but note it will also be the boot disks name which can not easily be changed later, but you can change the VM instance name easily later.
 \
-For "Region" you select one mentioned here ```https://cloud.google.com/free/docs/free-cloud-features#compute``` otherwise it will cost money.
+5. For "Region" you MUST select one mentioned here: ```https://cloud.google.com/free/docs/free-cloud-features#compute``` otherwise it will cost money.
 \
-For "Zone" I leave it on the default, but certain zones have different hardware avaliable, which could prevent you from easy upgrades in the future so look into each zone. ```https://cloud.google.com/compute/docs/regions-zones``` or ```Cant find.```.
+6. For "Zone" I leave it on the default, but certain zones have different hardware avaliable, which could prevent you from easy upgrades in the future so look into each zone: ```https://cloud.google.com/compute/docs/regions-zones``` or ```Cant find.```.
 \
-Go to "Machine configuration", and set the "Series" to "E2", now under "Machine type" select "e2-micro (2 vCPU, 1 GB memory)".
+7. Go to "Machine configuration", and set the "Series" to "E2", now under "Machine type" select "e2-micro (2 vCPU, 1 GB memory)".
 \
-Go to "Boot disk", click "CHANGE", now under "Boot disk type" select "Standard persistent disk".
+8. Go to "Boot disk", click "CHANGE", now under "Boot disk type" select "Standard persistent disk".
 \
-Under "Size (GB)" you can set it up to "30" note it is hard to change later.
+9. Under "Size (GB)" you can set it up to "30" note it is hard to change later to a lower amount.
 \
-(I use the default "Debian", "Debian GNU/Linux 11 (bullseye)" "x86/64, amd64 built on 20230411, supports Shielded VM features
+(I used the default "Debian", "Debian GNU/Linux 11 (bullseye)" "x86/64, amd64 built on 20230411, supports Shielded VM features
 ".)
 \
-After selecting/confirming it go to "Firewall" and check "Allow HTTP traffic" and "Allow HTTPS traffic".
+10. After selecting/confirming it go to "Firewall" and check "Allow HTTP traffic" and "Allow HTTPS traffic".
 \
-Expand
+11. Expand:
 ```
 Advanced options
 Networking, disks, security, management, sole-tenancy
 ```
-and then expand
+and then expand:
 ```
 Networking
 Hostname and network interfaces
 ```
-scroll to "Network interfaces", expand the default one and under "Network Service Tier" change it from "Premium" to Standard.
+and scroll to "Network interfaces", expand the default one and under "Network Service Tier" change it from "Premium" to Standard.
 
 ### Setup VM instance:
 #### Note: The commands are based on "https://docs.docker.com/engine/install/debian/#install-using-the-repository", and "https://levelup.gitconnected.com/the-easiest-docker-docker-compose-setup-on-compute-engine-ec171c09a29a".
