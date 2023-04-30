@@ -42,4 +42,4 @@ https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-C
 
 Sign up/Sign in if you have a google account already at https://cloud.google.com/free (It is possible to sign up and use compute engine without activating the $300 credit/trial.)
 
-Go to https://console.cloud.google.com/
+Go to https://console.cloud.google.com/compute
