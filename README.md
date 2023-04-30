@@ -64,7 +64,15 @@ exit
 curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_unbound_docker-compose.yml && sudo docker compose -f tailscaled_docker-compose.yml -f pihole_unbound_docker-compose.yml up -d
 ```
 
-##### Pihole additional Notes & Changes:
+##### Additional Notes & Changes:
+You have to modify in tailscaled_docker-compose.yml the "TS_AUTHKEY".
+
+You should modify in tailscaled_docker-compose.yml its "hostname".
+
+You have to modify the pihole_unbound_docker-compose.yml if you want it to use Unbound instead of Quad9.
+
+You should modify the TimeZone in pihole_unbound_docker-compose.yml.
+
 You have to look at the pihole docker container logs for the web interface randomly set password.
 
 I manually add to a adlist and then only apply this to certain groups with certain devices(Depending on setup you might need it to apply to all devices.):
