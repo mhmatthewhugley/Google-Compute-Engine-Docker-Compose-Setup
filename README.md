@@ -63,7 +63,15 @@ Under "Size (GB)" you can set it up to "30" note it is hard to change later.
 \
 After selecting/confirming it go to "Firewall" and check "Allow HTTP traffic" and "Allow HTTPS traffic".
 \
-Expand "Advanced options
-Networking, disks, security, management, sole-tenancy" and then expand "Networking
-Hostname and network interfaces" now scroll to "Network interfaces", expand the default one and change under "Network Service Tier" it from "Premium" to Standard.
+Expand
+```
+Advanced options
+Networking, disks, security, management, sole-tenancy
+```
+and then expand
+```
+Networking
+Hostname and network interfaces
+```
+now scroll to "Network interfaces", expand the default one and under "Network Service Tier" change it from "Premium" to Standard.
 \
