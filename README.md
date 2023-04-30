@@ -2,33 +2,7 @@
 
 This is my setup I use for Tailscale and Pihole(Unbound is included as a option.). In docker using compose. On a Google Cloud Compute Engine VM instance.
 
-## Setup VM instance.
-Then run the commands below in the order presented: (The commands are based on "https://docs.docker.com/engine/install/debian/#install-using-the-repository", and "https://levelup.gitconnected.com/the-easiest-docker-docker-compose-setup-on-compute-engine-ec171c09a29a)
-")
-
-```
-sudo su
-```
-```
-apt-get update && apt install --yes ca-certificates curl gnupg && install -m 0755 -d /etc/apt/keyrings && curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg && chmod a+r /etc/apt/keyrings/docker.gpg
-```
-```
-echo \
-  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
-  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
-  tee /etc/apt/sources.list.d/docker.list > /dev/null
-```
-```
-apt-get update && apt-get --yes install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-```
-```
-exit
-```
-```
-curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_unbound_docker-compose.yml && sudo docker compose -f tailscaled_docker-compose.yml -f pihole_unbound_docker-compose.yml up -d
-```
 ## Create VM instance to be within free limits (https://cloud.google.com/free/docs/free-cloud-features#compute):
-
 Sign up/Sign in if you have a google account already at ```https://cloud.google.com/free``` (It is possible to sign up and use compute engine without activating the $300 credit/trial.)
 \
 Go to ```https://console.cloud.google.com/compute```, and click "ENABLE"(Will take time.).
@@ -63,6 +37,32 @@ Networking
 Hostname and network interfaces
 ```
 scroll to "Network interfaces", expand the default one and under "Network Service Tier" change it from "Premium" to Standard.
+
+## Setup VM instance.
+Then run the commands below in the order presented: (The commands are based on "https://docs.docker.com/engine/install/debian/#install-using-the-repository", and "https://levelup.gitconnected.com/the-easiest-docker-docker-compose-setup-on-compute-engine-ec171c09a29a)
+")
+
+```
+sudo su
+```
+```
+apt-get update && apt install --yes ca-certificates curl gnupg && install -m 0755 -d /etc/apt/keyrings && curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg && chmod a+r /etc/apt/keyrings/docker.gpg
+```
+```
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
+```
+apt-get update && apt-get --yes install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+```
+exit
+```
+```
+curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_unbound_docker-compose.yml && sudo docker compose -f tailscaled_docker-compose.yml -f pihole_unbound_docker-compose.yml up -d
+```
 
 ### Pihole additional Notes/Changes:
 You have to look at the pihole docker container logs for the web interface randomly set password.
