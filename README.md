@@ -26,6 +26,8 @@ Networking
 Hostname and network interfaces
 ```
 and scroll to "Network interfaces", expand the default one and under "Network Service Tier" change it from "Premium" to Standard.
+\
+12. Click "CREATE".
 
 ### Setup VM instance:
 #### Note: The commands are based on "https://docs.docker.com/engine/install/debian/#install-using-the-repository", and "https://levelup.gitconnected.com/the-easiest-docker-docker-compose-setup-on-compute-engine-ec171c09a29a".
