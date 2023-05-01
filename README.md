@@ -80,8 +80,8 @@ You have to modify the pihole_unbound_docker-compose.yml if you want it to use U
 
 You should modify the TimeZone in pihole_unbound_docker-compose.yml.
 
+
 Randomly set WEB Interface Password.
-\
 Look for "Assigning random password:" manually:
 ```
 sudo docker logs pihole
@@ -97,6 +97,7 @@ If you want the whole line colored:
 ```
 sudo docker logs pihole 2>&1 | sed -n '/Assigning random password:/p' | grep --color=always 'Assigning random password:.*'
 ```
+
 
 Approve the correct device.
 Look for "serving on http://" manually:
@@ -114,6 +115,7 @@ If you want the whole line colored:
 ```
 sudo docker logs tailscaled 2>&1 | sed -n '/peerapi: serving on http:\/\//p' | grep --color=always 'peerapi: serving on http://*.*'
 ```
+
 
 I manually add to a adlist and then only apply this to certain groups with certain devices(Depending on setup you might need it to apply to all devices.):
 ```
