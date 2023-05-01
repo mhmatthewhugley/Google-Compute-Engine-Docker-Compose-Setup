@@ -82,9 +82,20 @@ You should modify the TimeZone in pihole_unbound_docker-compose.yml.
 
 Randomly set WEB Interface Password.
 \
-Look for either "Assigning random password:" or "New password set":
+Look for "Assigning random password:":
 ```
 sudo docker logs pihole
+```
+Or semi automatically:
+\
+If you want only the searched part colored:
+```
+sudo docker logs pihole 2>&1 | sed -n '/Assigning random password:/p' | grep --color=always 'Assigning random password:'
+```
+
+If you want the whole line colored:
+```
+sudo docker logs pihole 2>&1 | sed -n '/Assigning random password:/p' | grep --color=always 'Assigning random password:.*'
 ```
 
 Approve the correct device.
