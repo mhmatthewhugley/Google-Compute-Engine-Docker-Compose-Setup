@@ -15,8 +15,7 @@ This is my setup I use for Tailscale and Pihole(Unbound is included as a option.
 9. Under "Size (GB)" you can set it up to "30" note it is hard to change later to a lower amount.
 (I used the default "Debian", "Debian GNU/Linux 11 (bullseye)" "x86/64, amd64 built on 20230411, supports Shielded VM features
 ".)
-10. After selecting/confirming it go to "Firewall" and check "Allow HTTP traffic" and "Allow HTTPS traffic".
-11. Expand:
+10. After selecting/confirming, Expand:
 ```
 Advanced options
 Networking, disks, security, management, sole-tenancy
@@ -28,7 +27,7 @@ Hostname and network interfaces
 ```
 and scroll to "Network interfaces", expand the default one and under "Network Service Tier" change it from "Premium" to Standard.
 \
-12. Click "CREATE".
+11. Click "CREATE".
 
 
 ### Setup Snapshot:
