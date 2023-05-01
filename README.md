@@ -101,7 +101,7 @@ sudo docker logs tailscaled 2>&1 | sed -n '/peerapi: serving on http:\/\//p' | g
 
 If you want the whole line colored:
 ```
-sudo docker logs tailscaled 2>&1 | sed -n '/peerapi: serving on http:\/\//p' | grep --color=always 'peerapi: serving on http://*.*.*.*'
+sudo docker logs tailscaled 2>&1 | sed -n '/peerapi: serving on http:\/\//p' | grep --color=always 'peerapi: serving on http://*.*'
 ```
 
 I manually add to a adlist and then only apply this to certain groups with certain devices(Depending on setup you might need it to apply to all devices.):
