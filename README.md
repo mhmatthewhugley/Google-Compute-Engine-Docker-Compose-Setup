@@ -82,7 +82,7 @@ You should modify the TimeZone in pihole_unbound_docker-compose.yml.
 
 Randomly set WEB Interface Password.
 \
-Look for "Assigning random password:":
+Look for "Assigning random password:" manually:
 ```
 sudo docker logs pihole
 ```
