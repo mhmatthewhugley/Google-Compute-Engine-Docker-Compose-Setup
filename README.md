@@ -88,9 +88,20 @@ sudo docker logs pihole
 ```
 
 Approve the correct device.
-Look for "serving on http://":
+Look for "serving on http://" manually:
 ```
 sudo docker logs tailscaled
+```
+Or semi automatically:
+\
+If you want only the searched part colored:
+```
+sudo docker logs tailscaled 2>&1 | sed -n '/peerapi: serving on http:\/\//p' | grep --color=always 'peerapi: serving on http://'
+```
+
+If you want the whole line colored:
+```
+sudo docker logs tailscaled 2>&1 | grep --color=always -E 'peerapi: serving on http://.*|Listening on.*tcp:.*:41641'
 ```
 
 I manually add to a adlist and then only apply this to certain groups with certain devices(Depending on setup you might need it to apply to all devices.):
