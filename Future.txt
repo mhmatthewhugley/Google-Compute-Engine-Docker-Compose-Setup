@@ -1,2 +1,2 @@
 sudo su
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --run-once tailscaled pihole unbound
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once tailscaled pihole unbound
