@@ -71,13 +71,9 @@ curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-E
 ```
 
 
-#### Update containers/their images:
-These commands were ran in the order presented after each successfully finished:
+#### Update container(s)/their image(s):
 ```
-sudo su
-```
-```
-docker run --rm -e TZ=America/Chicago -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once tailscaled pihole unbound
+sudo docker run --rm -e TZ=America/Chicago -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once tailscaled pihole unbound
 ```
 
 
