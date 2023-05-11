@@ -71,6 +71,16 @@ curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-E
 ```
 
 
+#### Update containers/their images:
+These commands were ran in the order presented after each successfully finished:
+```
+sudo su
+```
+```
+docker run --rm -e TZ=America/Chicago -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once tailscaled pihole unbound
+```
+
+
 ##### Additional Notes & Changes:
 You have to modify in tailscaled_docker-compose.yml the "TS_AUTHKEY".
 
