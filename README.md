@@ -125,3 +125,12 @@ I manually add to a adlist and then only apply this to certain groups with certa
 ```
 https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/blacklist%20(https%3A__d3ward.github.io_toolz_adblock.html)
 ```
+
+I need to look into:
+```
+https://raw.githubusercontent.com/mmotti/pihole-regex/master/whitelist.list
+```
+and
+```
+https://www.reddit.com/r/pihole/comments/13ie8ok/new_malicious_tlds_released_by_google_and_how_and/
+```
