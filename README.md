@@ -87,7 +87,7 @@ You have to modify the pihole_unbound_docker-compose.yml if you want it to use U
 You should modify the TimeZone in pihole_unbound_docker-compose.yml.
 
 
-***Randomly set WEB Interface Password.***
+***Randomly set WEB Interface Password:***
 > Look for "Assigning random password:" manually:
 ```
 sudo docker logs pihole
@@ -104,7 +104,7 @@ sudo docker logs pihole 2>&1 | sed -n '/Assigning random password:/p' | grep --c
 ```
 
 
-***Approve the correct device.***
+***Approve the correct device:***
 > Look for "serving on http://" manually:
 ```
 sudo docker logs tailscaled
