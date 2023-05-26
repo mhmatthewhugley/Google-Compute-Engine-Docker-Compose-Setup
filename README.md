@@ -142,3 +142,12 @@ For the comment:
 ```
 Manual - Google .zip TLD
 ```
+
+***I manually Whitelist:***
+```
+dweb.link
+```
+For the comment:
+```
+Manual - Brave Web3
+```
