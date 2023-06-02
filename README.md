@@ -143,6 +143,19 @@ For the comment:
 Manual - Google .zip TLD
 ```
 
+***Alternative longer Regex blacklist:***
+```
+(^|\.)(aif|aiff|au|avi|bat|bmp|class|java|csv|cvs|dbf|dif|doc|docx|eps|exe|fm3|gif|hqx|htm|html|jpg|jpeg|mac|map|mdb|mid|mov|mtb|midi|qt|mtw|pdf|p65|t65|png|ppt|pptx|psd|psp|qxd|ra|rtf|sit|tar|tif|txt|wav|wk3|wks|wpd|wp5|xlsx|xlsx|zip|7zip|rar)$
+```
+Based on:
+\
+https://www.reddit.com/r/pihole/comments/13ie8ok/comment/jlke2xh/
+\
+For the comment:
+```
+Manual - TLDs
+```
+
 ***I manually Whitelist:***
 ```
 dweb.link
