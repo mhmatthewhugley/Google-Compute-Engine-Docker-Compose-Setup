@@ -52,10 +52,10 @@ These commands were ran in the order presented after each successfully finished:
 sudo su
 ```
 ```
-sudo apt-get upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 ```
 ```
-apt-get update && apt install --yes ca-certificates curl gnupg && install -m 0755 -d /etc/apt/keyrings && curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg && chmod a+r /etc/apt/keyrings/docker.gpg
+apt install --yes ca-certificates curl gnupg && install -m 0755 -d /etc/apt/keyrings && curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg && chmod a+r /etc/apt/keyrings/docker.gpg
 ```
 ```
 echo \
