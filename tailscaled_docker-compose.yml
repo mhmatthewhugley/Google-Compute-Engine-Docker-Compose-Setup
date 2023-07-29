@@ -13,7 +13,7 @@ services: # The services it will provide
     container_name: tailscaled # Name of container
     network_mode: "host" # Required for tailscale to work
     environment:
-      - TS_AUTHKEY=tskey-auth-kBzLAa2CNTRL-Fof1XFG3iRchcUuWLqPEScgjawpynrRe # Authenticates with your account https://tailscale.com/kb/1085/auth-keys/
+      - TS_AUTHKEY=tskey-auth-kX2oJT1CNTRL-muosEtDTqif1qtuuBWQzhfkTQvup3STAC # Authenticates with your account https://tailscale.com/kb/1085/auth-keys/
       - TS_ACCEPT_DNS=false # Required for pihole https://tailscale.com/kb/1114/pi-hole/
     hostname: googlecloudserver # This will become the tailscale device name
     image: tailscale/tailscale:latest # The image the container will use
