@@ -15,7 +15,7 @@ services: # The services it will provide
     environment:
       - TS_AUTHKEY=tskey-auth-kTHQDf5CNTRL-812JUoHTcRNE6CgxKA9mQNcKRZ4vQQ28 # Authenticates with your account https://tailscale.com/kb/1085/auth-keys/
       - TS_ACCEPT_DNS=false # Required for pihole https://tailscale.com/kb/1114/pi-hole/
-    hostname: googlecloudserver # This will become the tailscale device name
+    hostname: matthew-vps-googlecloudserver # This will become the tailscale device name
     image: tailscale/tailscale:latest # The image the container will use
     ipc: private
     logging:
