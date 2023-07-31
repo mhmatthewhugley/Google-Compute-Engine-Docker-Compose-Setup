@@ -1,0 +1,8 @@
+# Title: TextNowHosts
+# Description: Urls the TextNow app requires to launch smoothly on Android. Did not test if only a couple are needed, you can try narraowing down the list if you want. I can confirm these are requested when launching the app.
+0.0.0.0 data.emb-api.com
+0.0.0.0 api.leanplum.com
+0.0.0.0 app.adjust.com
+0.0.0.0 app.adjust.net.in
+0.0.0.0 app.adjust.world
+0.0.0.0 cdn.mobilefuse.com
