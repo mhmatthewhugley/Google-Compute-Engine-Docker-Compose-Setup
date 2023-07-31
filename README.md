@@ -164,3 +164,7 @@ For the comment:
 ```
 Manual - Brave Web3
 ```
+
+***Read for the Whitelist Information for the TextNow android App:***
+\
+https://github.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/blob/main/TextNowDomains.md
