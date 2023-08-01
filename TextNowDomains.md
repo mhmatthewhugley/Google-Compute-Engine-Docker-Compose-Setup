@@ -13,11 +13,3 @@ app.adjust.net.in
 app.adjust.world
 cdn.mobilefuse.com
 ```
-
-2023-07-31 16:17 CDT: Testing shows only these Below need to be Whitelisted:
-```
-data.emb-api.com
-api.leanplum.com
-app.adjust.net.in
-cdn.mobilefuse.com
-```
