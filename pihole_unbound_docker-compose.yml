@@ -43,4 +43,7 @@ services: # The services it will provide
             - '5335:53/udp' # Uses a port other then the default one for DNS services
             #- "443/tcp" # Used for DoH(DNS-over-HTTPS)
         image: mvance/unbound:latest # The image the container will use
+        # Volumes store your data between container upgrades
+        volumes:
+            - './pihole_unbound/opt-unbound-etc-unbound/:/opt/unbound/etc/unbound/' # Customized Unbound configuration location
         restart: unless-stopped # The container always restarts unless stopped by user
