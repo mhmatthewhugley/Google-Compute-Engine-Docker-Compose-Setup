@@ -88,6 +88,10 @@ You have to modify the pihole_unbound_docker-compose.yml if you want it to use U
 
 You should modify the TimeZone in pihole_unbound_docker-compose.yml.
 
+If using Unbound you should read this:
+\
+https://github.com/MatthewVance/unbound-docker#recursive-config
+
 
 ***Randomly set WEB Interface Password:***
 > Look for "Assigning random password:" manually:
