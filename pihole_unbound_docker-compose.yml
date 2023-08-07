@@ -45,5 +45,5 @@ services: # The services it will provide
         image: mvance/unbound:latest # The image the container will use
         # Volumes store your data between container upgrades
         volumes:
-            - './pihole_unbound/opt-unbound-etc-unbound/:/opt/unbound/etc/unbound/' # Customized Unbound configuration location
+            - './pihole_unbound/opt-unbound-etc-unbound/:/opt/unbound/etc/unbound/' # Customized Unbound configuration location example of a Recursive config https://github.com/MatthewVance/unbound-docker/blob/master/unbound.conf
         restart: unless-stopped # The container always restarts unless stopped by user
