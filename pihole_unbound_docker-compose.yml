@@ -44,7 +44,7 @@ services: # The services it will provide
             #- "443/tcp" # Used for DoH(DNS-over-HTTPS)
         image: mvance/unbound:latest # The image the container will use
         # Volumes store your data between container upgrades
-        volumes:
-            - './pihole_unbound/opt-unbound-etc-unbound/:/opt/unbound/etc/unbound/' # Unbound configuration location
+        #volumes:
+            #- './pihole_unbound/opt-unbound-etc-unbound/:/opt/unbound/etc/unbound/' # Unbound configuration location
             # Example of a Customized Recursive config see: https://github.com/MatthewVance/unbound-docker/blob/master/unbound.conf
         restart: unless-stopped # The container always restarts unless stopped by user
