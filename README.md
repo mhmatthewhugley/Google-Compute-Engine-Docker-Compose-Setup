@@ -82,6 +82,8 @@ You have to modify in tailscaled_docker-compose.yml the "TS_AUTHKEY".
 
 You should modify in tailscaled_docker-compose.yml its "hostname".
 
+At Tailscale website you should have MagicDNS disabled. https://tailscale.com/kb/1081/magicdns/
+
 You have to modify the pihole_unbound_docker-compose.yml if you want it to use Unbound instead of Quad9.
 
 You should modify the TimeZone in pihole_unbound_docker-compose.yml.
