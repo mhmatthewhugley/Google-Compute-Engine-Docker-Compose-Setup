@@ -131,7 +131,7 @@ sudo docker logs tailscaled 2>&1 | sed -n '/peerapi: serving on http:\/\//p' | g
 
 ***I manually add to a adlist***(Do not recommend.) and then only apply this to certain groups with certain devices(Depending on setup you might need it to apply to all devices.):
 ```
-https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/blacklist%20(https%3A__d3ward.github.io_toolz_adblock.html)
+https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/blacklist%20d3ward_toolz_adblock_html
 ```
 
 ***I whitelist these URLs:***
