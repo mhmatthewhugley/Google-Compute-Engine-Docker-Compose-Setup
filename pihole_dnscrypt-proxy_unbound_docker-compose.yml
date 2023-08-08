@@ -7,6 +7,7 @@ services: # The services it will provide
     container_name: pihole # Name of container
     network_mode: host # Make the container not isolated from the Docker hosts network. Allows you to connect to the hosts localhost instead of the containers
     image: jacklul/pihole:latest # The image the container will use
+    profiles: ["PIHOLE"] # Used to conditionally enable or disable this service based on the value in .env file
     # The ports
     ports:
       - "53:53/tcp" # DNS services
@@ -38,6 +39,7 @@ services: # The services it will provide
     container_name: dnscrypt-proxy # Name of container
     network_mode: bridge # Needed for pihole integration
     image: klutchell/dnscrypt-proxy:latest # The image the container will use
+    profiles: ["DNSCRYPT-PROXY"] # Used to conditionally enable or disable this service based on the value in .env file
     # The ports    
     ports:
       - '5053:5053/udp' # Required to expose what this service provides to other software
@@ -55,6 +57,7 @@ services: # The services it will provide
       - '5335:53/udp' # Required to expose what this service provides to other software
       #- "443/tcp" # Used for DoH(DNS-over-HTTPS)
     image: mvance/unbound:latest # The image the container will use
+    profiles: ["UNBOUND"] # Used to conditionally enable or disable this service based on the value in .env file
     # Volumes store your data between container upgrades
     #volumes:
       #- './pihole_unbound/opt-unbound-etc-unbound/:/opt/unbound/etc/unbound/' # Unbound configuration location
