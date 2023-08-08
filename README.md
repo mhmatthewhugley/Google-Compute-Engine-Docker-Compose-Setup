@@ -93,9 +93,9 @@ You should modify in tailscaled_docker-compose.yml its "hostname".
 
 At Tailscale website you should have [MagicDNS](https://tailscale.com/kb/1081/magicdns/) disabled.
 
-You have to modify the pihole_unbound_docker-compose.yml if you want it to use Unbound instead of Quad9.
+You have to modify the pihole_dnscrypt-proxy_unbound_docker-compose.yml file if you want Pi-hole to use a different Upstream DNS Provider instead of Cloudflare.
 
-You should modify the TimeZone in pihole_unbound_docker-compose.yml.
+You should modify the TimeZone in pihole_dnscrypt-proxy_unbound_docker-compose.yml.
 
 If using Unbound you should read this:
 \
