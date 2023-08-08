@@ -80,7 +80,7 @@ sudo docker compose -f tailscaled/tailscaled_docker-compose.yml -f pihole_dnscry
 
 #### Update container(s)/their image(s):
 ```
-sudo docker run --rm -e TZ=America/Chicago -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once tailscaled pihole unbound
+sudo docker run --rm -e TZ=America/Chicago -v /var/run/docker.sock:/var/run/docker.sock containrrr/watchtower --cleanup --run-once tailscaled pihole dnscrypt-proxy unbound
 ```
 
 
