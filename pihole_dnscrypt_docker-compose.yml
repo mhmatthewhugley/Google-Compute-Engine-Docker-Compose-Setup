@@ -47,3 +47,17 @@ services: # The services it will provide
       server_names: 'cloudflare'
     restart: unless-stopped # The container always restarts unless stopped by user
     condition: "${ENABLE_DNSCRYPT}" == "true" # Conditionally enable the service based on the value in .env file
+  unbound:
+        container_name: unbound # Name of container
+        network_mode: bridge # Needed for pihole integration
+        ports: # The ports
+            - '5335:53/tcp' # Uses a port other then the default one for DNS services
+            - '5335:53/udp' # Uses a port other then the default one for DNS services
+            #- "443/tcp" # Used for DoH(DNS-over-HTTPS)
+        image: mvance/unbound:latest # The image the container will use
+        # Volumes store your data between container upgrades
+        #volumes:
+            #- './pihole_unbound/opt-unbound-etc-unbound/:/opt/unbound/etc/unbound/' # Unbound configuration location
+            # Example of a Customized Recursive config see: https://github.com/MatthewVance/unbound-docker/blob/master/unbound.conf
+        restart: unless-stopped # The container always restarts unless stopped by user
+        condition: "${ENABLE_UNBOUND}" == "true" # Conditionally enable the service based on the value in .env file
