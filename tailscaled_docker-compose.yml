@@ -25,7 +25,3 @@ services: # The services it will provide
     volumes:
       - ./Tailscale/var_lib:/var/lib # State data will be stored in this directory
       - /dev/net/tun:/dev/net/tun # Required for tailscale to work
-# Required for tailscale to work
-networks:
-  host:
-    external: true
