@@ -67,14 +67,14 @@ apt-get update && apt-get --yes install docker-ce docker-ce-cli containerd.io do
 exit
 ```
 ```
-mkdir tailscaled && mkdir pihole_dnscrypt_unbound && \
+mkdir tailscaled && mkdir pihole_dnscrypt-proxy_unbound && \
 curl -fsSL -o tailscaled/tailscaled_docker-compose.yml https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml && \
-curl -fsSL -o pihole_dnscrypt_unbound/pihole_dnscrypt_unbound_docker-compose.yml https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_dnscrypt_unbound_docker-compose.yml && \
-curl -fsSL -o pihole_dnscrypt_unbound/.env https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/.env && \
+curl -fsSL -o pihole_dnscrypt-proxy_unbound/pihole_dnscrypt-proxy_unbound_docker-compose.yml https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_dnscrypt-proxy_unbound_docker-compose.yml && \
+curl -fsSL -o pihole_dnscrypt-proxy_unbound/.env https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/.env && \
 echo "YAML files and .env downloaded. Please review and modify them as needed."
 ```
 ```
-sudo docker compose -f tailscaled/tailscaled_docker-compose.yml -f pihole_dnscrypt_unbound/pihole_dnscrypt_unbound_docker-compose.yml up -d
+sudo docker compose -f tailscaled/tailscaled_docker-compose.yml -f pihole_dnscrypt-proxy_unbound/pihole_dnscrypt-proxy_unbound_docker-compose.yml up -d
 ```
 
 
