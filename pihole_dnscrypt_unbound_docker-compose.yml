@@ -34,7 +34,7 @@ services: # The services it will provide
     #  - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
     restart: unless-stopped # The container always restarts unless stopped by user
     condition: "${ENABLE_PIHOLE}" == "true" # Conditionally enable the service based on the value in .env file
-  dnscrypt:
+  dnscrypt-proxy:
     container_name: dnscrypt-proxy # Name of container
     network_mode: bridge
     image: klutchell/dnscrypt-proxy:latest # The image the container will use
