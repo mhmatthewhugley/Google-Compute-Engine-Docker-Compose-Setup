@@ -13,7 +13,7 @@ services: # The services it will provide
       - "53:53/udp" # DNS services
       #- "67:67/udp" # Only required if you are using Pi-hole as your DHCP server
       - "80:80/tcp" # HTTP WEB GUI Service
-      - "443:443"
+      - "443:443" # Not sure if this is needed
     environment:
       TZ: 'America/Chicago' # The TimeZone
       PIHOLE_DNS_: '1.1.1.1;1.0.0.1' # Can set Upstream DNS server(s) to DNSCrypt-proxy"127.0.0.1#5053;127.0.0.1#5053" or Unbound"127.0.0.1#5335;127.0.0.1#5335" if you dont want to use any of those Quad9"9.9.9.9;149.112.112.112" might be a good alternative
