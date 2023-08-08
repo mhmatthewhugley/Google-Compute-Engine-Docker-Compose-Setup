@@ -67,7 +67,7 @@ apt-get update && apt-get --yes install docker-ce docker-ce-cli containerd.io do
 exit
 ```
 ```
-curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_unbound_docker-compose.yml && sudo docker compose -f tailscaled_docker-compose.yml -f pihole_unbound_docker-compose.yml up -d
+curl -fsSL -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml -O https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_dnscrypt_unbound_docker-compose.yml && sudo docker compose -f tailscaled_docker-compose.yml -f pihole_dnscrypt_unbound_docker-compose.yml up -d
 ```
 
 
@@ -78,6 +78,8 @@ sudo docker run --rm -e TZ=America/Chicago -v /var/run/docker.sock:/var/run/dock
 
 
 ##### Additional Notes & Changes:
+You should look at the .env file.
+
 You have to modify in tailscaled_docker-compose.yml the "TS_AUTHKEY".
 
 You should modify in tailscaled_docker-compose.yml its "hostname".
