@@ -34,7 +34,6 @@ services: # The services it will provide
     #cap_add:
     #  - NET_ADMIN # Required if you are using Pi-hole as your DHCP server, else not needed
     restart: unless-stopped # The container always restarts unless stopped by user
-    condition: "${ENABLE_PIHOLE}" == "true" # Conditionally enable the service based on the value in .env file
   dnscrypt-proxy:
     container_name: dnscrypt-proxy # Name of container
     network_mode: bridge # Needed for pihole integration
@@ -48,7 +47,6 @@ services: # The services it will provide
       TZ: 'America/Chicago' # The TimeZone
       server_names: 'cloudflare' # https://dnscrypt.info/public-servers/
     restart: unless-stopped # The container always restarts unless stopped by user
-    condition: "${ENABLE_DNSCRYPT-PROXY}" == "true" # Conditionally enable the service based on the value in .env file
   unbound:
     container_name: unbound # Name of container
     network_mode: bridge # Needed for pihole integration
@@ -63,4 +61,3 @@ services: # The services it will provide
       #- './pihole_unbound/opt-unbound-etc-unbound/:/opt/unbound/etc/unbound/' # Unbound configuration location
       # Example of a Customized Recursive config see: https://github.com/MatthewVance/unbound-docker/blob/master/unbound.conf
     restart: unless-stopped # The container always restarts unless stopped by user
-    condition: "${ENABLE_UNBOUND}" == "true" # Conditionally enable the service based on the value in .env file
