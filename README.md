@@ -1,6 +1,6 @@
 # Google-Compute-Engine-Docker-Compose-Setup
 
-This is my setup I use for Tailscale and Pihole(Unbound is included as a option.). In docker using compose. On a FREE Google Cloud Compute Engine VM instance.
+This is my setup I use for Tailscale and Pihole(DNSCrypt-Proxy and Unbound is included as a option.). In docker using compose. On a FREE Google Cloud Compute Engine VM instance.
 
 
 ## Create VM instance to be within free limits (https://cloud.google.com/free/docs/free-cloud-features#compute):
