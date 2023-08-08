@@ -136,7 +136,7 @@ sudo docker logs tailscaled 2>&1 | sed -n '/peerapi: serving on http:\/\//p' | g
 ```
 
 
-***I manually add to a adlist***(Do not recommend.) and then only apply this to certain groups with certain devices(Depending on setup you might need it to apply to all devices.):
+***I used to manually add to an adlist this***(Do not recommend.) and then only applied this to certain groups with certain devices(Depending on setup you might need it to apply to all devices.):
 ```
 https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/blacklist%20d3ward_toolz_adblock_html
 ```
@@ -145,7 +145,7 @@ https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-C
 \
 https://raw.githubusercontent.com/mmotti/pihole-regex/master/whitelist.list
 
-***I manually add this Regex blacklist:***
+***I used to manually add this Regex blacklist:***
 ```
 (\.|^)zip$
 ```
