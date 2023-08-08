@@ -46,7 +46,7 @@ services: # The services it will provide
       TZ: 'America/Chicago' # The TimeZone
       server_names: 'cloudflare'
     restart: unless-stopped # The container always restarts unless stopped by user
-    condition: "${ENABLE_DNSCRYPT}" == "true" # Conditionally enable the service based on the value in .env file
+    condition: "${ENABLE_DNSCRYPT-PROXY}" == "true" # Conditionally enable the service based on the value in .env file
   unbound:
         container_name: unbound # Name of container
         network_mode: bridge # Needed for pihole integration
