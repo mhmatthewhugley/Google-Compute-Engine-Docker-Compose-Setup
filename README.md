@@ -71,7 +71,7 @@ mkdir tailscaled && mkdir pihole_dnscrypt-proxy_unbound && \
 curl -fsSL -o tailscaled/tailscaled_docker-compose.yml https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/tailscaled_docker-compose.yml && \
 curl -fsSL -o pihole_dnscrypt-proxy_unbound/pihole_dnscrypt-proxy_unbound_docker-compose.yml https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/pihole_dnscrypt-proxy_unbound_docker-compose.yml && \
 curl -fsSL -o pihole_dnscrypt-proxy_unbound/.env https://raw.githubusercontent.com/mhmatthewhugley/Google-Compute-Engine-Docker-Compose-Setup/main/.env && \
-echo "YAML files and .env downloaded. Please review and modify them as needed. Chances are you can use sudo nano and then the file you want to modify."
+echo "Compose files and env file downloaded. Please review and modify them as needed. Chances are you can use sudo nano filename.type to modify."
 ```
 ```
 sudo docker compose -f tailscaled/tailscaled_docker-compose.yml up -d ; sudo docker compose -f pihole_dnscrypt-proxy_unbound/pihole_dnscrypt-proxy_unbound_docker-compose.yml up -d
@@ -91,11 +91,11 @@ You have to modify in tailscaled_docker-compose.yml the "TS_AUTHKEY".
 
 You should modify in tailscaled_docker-compose.yml its "hostname".
 
-At Tailscale website you should have [MagicDNS](https://tailscale.com/kb/1081/magicdns/) disabled.
+At Tailscale website you should have [MagicDNS](https://tailscale.com/kb/1081/magicdns/) disabled if using any of the optionals.
 
-You have to modify the pihole_dnscrypt-proxy_unbound_docker-compose.yml file if you want Pi-hole to use a different Upstream DNS Provider instead of Cloudflare.
+You have to modify the pihole_dnscrypt-proxy_unbound_docker-compose.yml file if you want Pi-hole to use a different Upstream DNS Provider instead of the current default of Cloudflare.
 
-You should modify the TimeZone in pihole_dnscrypt-proxy_unbound_docker-compose.yml.
+You should modify the TimeZone in pihole_dnscrypt-proxy_unbound_docker-compose.yml for accurate log times.
 
 If using Unbound you should read this:
 \
