@@ -17,7 +17,7 @@ services: # The services it will provide
       - TS_ACCEPT_DNS=false # Required for pihole https://tailscale.com/kb/1114/pi-hole/
     hostname: matthew-vps-googlecloudserver # This will become the tailscale device name
     image: tailscale/tailscale:latest # The image the container will use
-    ipc: private
+    ipc: private # Makes the memory allocated not shared
     logging:
       driver: json-file
       options: {}
