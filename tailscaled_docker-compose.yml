@@ -14,6 +14,7 @@ services: # The services it will provide
     network_mode: "host" # Required for tailscale to work
     environment:
       - TS_AUTHKEY=tskey-auth-kTHQDf5CNTRL-812JUoHTcRNE6CgxKA9mQNcKRZ4vQQ28 # Authenticates with your account https://tailscale.com/kb/1085/auth-keys/
+      #- TS_EXTRA_ARGS=--advertise-exit-node # Allows devices to use this network as a exit node
       - TS_ACCEPT_DNS=false # Required for pihole https://tailscale.com/kb/1114/pi-hole/
     hostname: matthew-vps-googlecloudserver # This will become the tailscale device name
     image: tailscale/tailscale:latest # The image the container will use
